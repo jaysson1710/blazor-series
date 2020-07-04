@@ -1,16 +1,27 @@
 ﻿@page "/counter"
-
 <h1>Counter</h1>
 
-<p>Current count: @currentCount</p>
+<BlazorApp1.Client.Components.CounterPrint CurrentCount="@currentCount" Title="Counter" />
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<p>demo bind</p>
+<input type="text" @bind="texto"/>
+
+<p>Resultado bind</p>
+<label @bind-title="texto" @bind-title:event="onchange" />
+
+<button class="btn btn-primary" value="asdf">
+    
+</button>
+
 
 @code {
     private int currentCount = 0;
+
+    private string texto = "demo";
 
     private void IncrementCount()
     {
         currentCount++;
     }
+
 }

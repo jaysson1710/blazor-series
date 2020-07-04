@@ -1,0 +1,20 @@
+﻿@page "/404"
+    <div>
+        <p> Informacion no encontrada</p>
+        <br />
+        <button type="button" title="Retorno" @onclick="Accion">Retorno</button>
+        <button type="button" title="Retorno2" @onclick="Accion2">Retorno</button>
+       
+        <div class="row">
+            <div class="col">
+                If you want, you can report this error by clicking the following link:
+                <a href="/errorParam/123" >asdasdad</a>
+            </div>
+        </div>
+    </div>
+@code{
+    public void Accion2()
+    {
+        NavigationManager.NavigateTo("/counter");
+    }
+}

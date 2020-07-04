@@ -1,0 +1,16 @@
+﻿@page "/errorparam/{codigo:int}"
+<div class="estilo">
+    <p>Codigo del error</p>
+    <br />
+    <p>@Codigo</p>
+</div>
+@code{
+    [Parameter]
+    public int Codigo { get; set; }
+}
+<style>
+    .estilo {
+        color: darkred;
+        font-size: x-large;
+    }
+</style>
