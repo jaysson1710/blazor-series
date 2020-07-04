@@ -1,0 +1,16 @@
+﻿
+<h3 style="color: @Color" >@Title</h3>
+<div>
+    <img @attributes="Attributes" />
+
+</div>
+@code {
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter(CaptureUnmatchedValues =true)]
+    public Dictionary<string, object> Attributes { get; set; }
+    
+    [CascadingParameter]
+    public string Color { get; set; }
+}
