@@ -21,5 +21,9 @@ namespace BlazorApp1.Client.Components
         [Parameter]
         public RenderFragment FragmentoHtml { get; set; }
 
+
+        private void GetItems()
+        { 
+        }
     }
 }
